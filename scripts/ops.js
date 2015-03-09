@@ -16,7 +16,7 @@ module.exports = function(robot){
 		robot.logger.error('HUBOT_POSTMARK_API_KEY not set');
 	}
 
-	robot.hear(/!ops (.*)/i,function(msg){
+	robot.hear(/^!ops (.*)/i,function(msg){
 		if(!HUBOT_POSTMARK_API_KEY){
 			msg.send('HUBOT_POSTMARK_API_KEY environment variable not set');
 			return;

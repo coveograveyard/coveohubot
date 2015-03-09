@@ -10,7 +10,7 @@
 //   pastjean
 
 module.exports = function(robot){
-  robot.hear('!wat',function(msg){
+  robot.hear(/^!wat/i,function(msg){
     msg.send('_'+msg.message.user.name+' hurts itself in its confusion!_');
   });
 };

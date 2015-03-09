@@ -10,7 +10,7 @@
 //   pastjean
 
 module.exports = function(robot){
-  robot.hear('!yes',function(msg){
+  robot.hear(/^!yes/i,function(msg){
     msg.send('Good point,' + msg.message.user.name)
   });
 }

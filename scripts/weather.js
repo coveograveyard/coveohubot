@@ -13,7 +13,7 @@
 var request = require("request");
 
 module.exports = function(robot){
-	robot.hear(/!forecast (.*)/i,function(msg){
+	robot.hear(/^!forecast (.*)/i,function(msg){
 		var where = encodeURIComponent(match[1]);
 
 		request('http://api.openweathermap.org/data/2.5/forecast/daily?cnt=5&q=' + where, function(err,res,body){
@@ -33,7 +33,7 @@ module.exports = function(robot){
 	});
 
 
-	robot.hear(/!weather (.*)/i,function(msg){
+	robot.hear(/^!weather (.*)/i,function(msg){
 		var where = encodeURIComponent(match[1]);
 
 		request('http://api.openweathermap.org/data/2.5/weather?q=' + where, function(err,res,body){

@@ -9,7 +9,7 @@
 //   olamothe
 //   guisim
 module.exports = function(robot){
-  robot.hear(/^!slap (.*)/i,function(msg){
+  robot.hear(/^!slap (.*)/i, function(msg){
     msg.send(':hand: _slaps' + match[1] +' with a large trout._ :fish:');
   });
 };
