@@ -1,0 +1,29 @@
+{
+  "name": "hubot",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Coveo <coveo@coveo.com>",
+  "description": "I'm here to bring order and troubles",
+  "dependencies": {
+    "hubot": "^2.11.2",
+    "hubot-calculator": "^0.4.0",
+    "hubot-diagnostics": "0.0.1",
+    "hubot-giphy-gifme": "^0.1.2",
+    "hubot-google-images": "^0.1.4",
+    "hubot-google-translate": "^0.1.0",
+    "hubot-help": "^0.1.1",
+    "hubot-heroku-keepalive": "0.0.4",
+    "hubot-javascript": "0.0.7",
+    "hubot-redis-brain": "0.0.2",
+    "hubot-rules": "^0.1.0",
+    "hubot-scripts": "^2.5.16",
+    "hubot-slack": "^3.3.0",
+    "hubot-youtube": "^0.1.2",
+    "postmark": "^1.0.0",
+    "request": "^2.53.0",
+    "sentiment": "^1.0.2"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}

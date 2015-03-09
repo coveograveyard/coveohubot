@@ -1,0 +1,12 @@
+[
+  "hubot-help",
+  "hubot-heroku-keepalive",
+  "hubot-google-images",
+  "hubot-google-translate",
+  "hubot-redis-brain",
+  "hubot-rules",
+  "hubot-youtube",
+  "hubot-javascript",
+  "hubot-giphy-gifme",
+  "hubot-calculator"
+]
