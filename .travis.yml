@@ -5,6 +5,6 @@ deploy:
   provider: heroku
   api_key:
     secure: kUW7w3szbhxeN0BTsxf3Q3IANPM9hYAMq9SP//T2JsL8C6dXUPFMqpOOxyDmu9D6rVYCgv+MksAQV/ZougoNkD/YpVA4I5w0tjGmtoGC1kbUrs6GMOvymQvy30C5b1s5yYBVjihHNclSHBannnbMwj+kgGRJ7ELN5SjvDS/Dz80=
-  app: rocky-island-4451
+  app: coveohubot
   on:
     repo: pastjean/coveohubot
