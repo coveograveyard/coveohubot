@@ -27,7 +27,7 @@ module.exports = function(robot){
 				msg.send(data.message);
 				return;
 			}
-			msg.send('Weather in ' + data.city.name + ', ' + data.city.country + ' for the next 5 days\n ' + weathers.join('\n'));
+			msg.send('Weather in ' + data.city.name + ', ' + data.city.country + ' for the next 5 days\n ' + data.weathers.join('\n'));
 
 		});
 	});
