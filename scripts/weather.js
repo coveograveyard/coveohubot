@@ -14,14 +14,14 @@ var request = require("request");
 var	moment  = require("moment");
 
 var forecastTemplate = function(data){
-	var result = 'Weather in *' + data.city.name + '*, *' +data.city.country + '* for the next *5* days: \n';
+	var result = 'Weather in *' + data.city.name + '*, ' +data.city.country + ' for the next *5* days: \n';
 
 	var days = data.list.map(function(day){
 		return 'on *' + moment(day.dt,'X').format('dddd') + '*' +
 					 ': *' + day.weather[0].main  + '*' +
-					 ' at ' + (day.temp.day - 273.15).toFixed(2) + '°C,' +
-					 ' max :' + (day.temp.max - 273.15).toFixed(2) + '°C,' +
-			  	 ' min :' + (day.temp.min - 273.15).toFixed(2) + '°C,' ;
+					 ' at *' + (day.temp.day - 273.15).toFixed(2) + '°C*' +
+					 '[ max :' + (day.temp.max - 273.15).toFixed(2) + '°C,' +
+			  	 ' min :' + (day.temp.min - 273.15).toFixed(2) + '°C ]' ;
 
 	}).join('\n');
 
@@ -65,7 +65,10 @@ module.exports = function(robot){
 				return;
 			}
 
-			msg.send('Weather in '+ data.name + ', ' + data.sys.country + ': ' + (data.main.temp - 273).toFixed(2) + " °C, " + data.weather[0].main);
+			msg.send('Current weather in *'+ data.name + '*'+
+							 ', ' + data.sys.country +
+							 ': *' + (data.main.temp - 273.15).toFixed(2) + '°C*, ' +
+							 data.weather[0].main);
 
 		});
 	});
