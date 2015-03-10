@@ -20,7 +20,7 @@ var forecastTemplate = function(data){
 		return '\t on *' + moment(day.dt,'X').format('dddd') + '*' +
 					 ': *' + day.weather[0].main  + '*' +
 					 ' at *' + (day.temp.day - 273.15).toFixed(2) + '°C*' +
-					 '[ max :' + (day.temp.max - 273.15).toFixed(2) + '°C,' +
+					 ' [ max :' + (day.temp.max - 273.15).toFixed(2) + '°C,' +
 			  	 ' min :' + (day.temp.min - 273.15).toFixed(2) + '°C ]' ;
 
 	}).join('\n');
