@@ -14,7 +14,7 @@ var request = require("request");
 module.exports = function(robot){
   robot.hear(/^!wiki (.*)/i,function(msg){
 
-    var search = encodeURIComponent(match[1]);
+    var search = encodeURIComponent(msg.match[1]);
     request('http://en.wikipedia.org/w/api.php?format=json&action=opensearch&limit=2&format=json&search='+ search, function(err,res,body){
       if(err){
         msg.send('Error: ' +err);
@@ -24,7 +24,7 @@ module.exports = function(robot){
       if(result){
         msg.send('https://en.wikipedia.org/wiki/' + encodeURIComponent(result));
       }else{
-        msg.send('No wiki article on ' + match[1]);
+        msg.send('No wiki article on ' + msg.match[1]);
       }
 
     });

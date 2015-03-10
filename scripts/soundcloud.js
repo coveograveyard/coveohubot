@@ -21,7 +21,7 @@ module.exports = function(robot){
 			return;
 		}
 
-		var keywords = encodeURIComponent(match[1]);
+		var keywords = encodeURIComponent(msg.match[1]);
 		request('http://api.soundcloud.com/tracks.json?client_id='+HUBOT_SOUNDCLOUD_API_KEY+'&q='+ keywords , function(err,res,body){
 			if(err || res.statusCode != 200){
 				msg('Error: '+ err);
@@ -30,7 +30,7 @@ module.exports = function(robot){
 
 			var data = JSON.parse(body);
 			if(data.length < 1){
-				msg.send('SoundCloud: nothing found for '+ match[1]);
+				msg.send('SoundCloud: nothing found for '+ msg.match[1]);
 				return;
 			}
 

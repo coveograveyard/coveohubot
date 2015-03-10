@@ -14,7 +14,7 @@ var request = require("request");
 
 module.exports = function(robot){
 	robot.hear(/^!forecast (.*)/i,function(msg){
-		var where = encodeURIComponent(match[1]);
+		var where = encodeURIComponent(msg.match[1]);
 
 		request('http://api.openweathermap.org/data/2.5/forecast/daily?cnt=5&q=' + where, function(err,res,body){
 			if (err || res.statusCode != 200) {
@@ -34,7 +34,7 @@ module.exports = function(robot){
 
 
 	robot.hear(/^!weather (.*)/i,function(msg){
-		var where = encodeURIComponent(match[1]);
+		var where = encodeURIComponent(msg.match[1]);
 
 		request('http://api.openweathermap.org/data/2.5/weather?q=' + where, function(err,res,body){
 			if (err || res.statusCode != 200) {

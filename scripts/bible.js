@@ -12,7 +12,7 @@ var request = require("request");
 
 module.exports = function(robot){
 	robot.hear(/^!bible (.*)/i,function(msg){
-		var passage = encodeURIComponent(match[1]);
+		var passage = encodeURIComponent(msg.match[1]);
 
 		request("http://labs.bible.org/api/?formatting=plain&passage=" + passage, function(err,res,body){
 			if (err || res.statusCode != 200) {

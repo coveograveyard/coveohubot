@@ -10,6 +10,6 @@
 //   guisim
 module.exports = function(robot){
   robot.hear(/^!slap (.*)/i, function(msg){
-    msg.send(':hand: _slaps' + match[1] +' with a large trout._ :fish:');
+    msg.send(':hand: _slaps' + msg.match[1] +' with a large trout._ :fish:');
   });
 };

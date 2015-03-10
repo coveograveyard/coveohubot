@@ -1,4 +1,3 @@
-
 # coveo's hubot
 [![Build Status](https://travis-ci.org/pastjean/coveohubot.svg)](https://travis-ci.org/pastjean/coveohubot)
 
