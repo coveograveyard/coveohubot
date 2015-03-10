@@ -11,6 +11,23 @@
 //   guisim
 
 var request = require("request");
+var	moment  = require("moment");
+
+var forecastTemplate = function(data){
+	var result = 'Weather in *' + data.city.name + '*, *' +data.city.country + '* for the next *5* days: \n';
+
+	var days = data.list.map(function(day){
+		return 'on *' + moment(day.dt,'X').format('dddd') + '*' +
+					 ': *' + day.weather[0].main  + '*' +
+					 ' at ' + (day.temp.day - 273.15).toFixed(2) + '°C,' +
+					 ' max :' + (day.temp.max - 273.15).toFixed(2) + '°C,' +
+			  	 ' min :' + (day.temp.min - 273.15).toFixed(2) + '°C,' ;
+
+	}).join('\n');
+
+
+	return result + days;
+};
 
 module.exports = function(robot){
 	robot.hear(/^!forecast (.*)/i,function(msg){
@@ -27,8 +44,8 @@ module.exports = function(robot){
 				msg.send(data.message);
 				return;
 			}
-			msg.send('Weather in ' + data.city.name + ', ' + data.city.country + ' for the next 5 days\n ' + data.weathers.join('\n'));
-
+			console.log(JSON.stringify(data));
+			msg.send(forecastTemplate(data));
 		});
 	});
 
