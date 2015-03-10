@@ -13,6 +13,32 @@
 var request = require("request");
 var	moment  = require("moment");
 
+
+var idToIcon = {
+	'01d': ':clearsky:',
+	'01n': ':clearskyn:',
+	'02d': ':fewclouds:',
+	'02n': ':fewcloudsn:',
+	'03d': ':scatteredclouds:',
+	'03n': ':scatteredclouds:',
+	'04d': ':brokenclouds:',
+	'04n': ':brokenclouds:',
+	'09d': ':showerrain:',
+	'09n': ':showerrainn:',
+	'10d': ':rain:',
+	'10n': ':rainn:',
+	'11d': ':thunderstorm:',
+	'11n': ':thunderstorm:',
+	'13d': ':snow:',
+	'13n': ':snow:',
+	'50d': ':mist:',
+	'50n': ':mist:',
+}
+
+var getIconForWeather = function(weathericon){
+	return idToIcon[weathericon] ? idToIcon[weathericon] : '#noIconForcode['+weathericon+']'
+}
+
 var forecastTemplate = function(data){
 	var result = 'Weather in *' + data.city.name + '*, ' +data.city.country + ' for the next *5* days: \n';
 
