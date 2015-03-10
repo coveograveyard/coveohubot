@@ -17,7 +17,7 @@ var forecastTemplate = function(data){
 	var result = 'Weather in *' + data.city.name + '*, ' +data.city.country + ' for the next *5* days: \n';
 
 	var days = data.list.map(function(day){
-		return 'on *' + moment(day.dt,'X').format('dddd') + '*' +
+		return '\t on *' + moment(day.dt,'X').format('dddd') + '*' +
 					 ': *' + day.weather[0].main  + '*' +
 					 ' at *' + (day.temp.day - 273.15).toFixed(2) + '°C*' +
 					 '[ max :' + (day.temp.max - 273.15).toFixed(2) + '°C,' +
