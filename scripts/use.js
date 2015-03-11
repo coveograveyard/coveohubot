@@ -12,10 +12,10 @@
 var _effectivenessReduce = function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a}
 
 module.exports = function(robot){
-  robot.hear(/^!use (.*)/,function(msg){
-    var what = msg.match[1];
+  robot.hear(/^!use/,function(msg){
+    var action = msg.message.text.replace(/^!use /,"");
 
-    var splitted = what.split(" ");
+    var splitted = action.split(" ");
     if(splitted.length < 2){
       msg.send("Must specify an attack and a target\n>!use attack target");
       return;
@@ -23,7 +23,7 @@ module.exports = function(robot){
 
     var target = splitted.slice(1,-1).join(" ");
     var atk = splitted[0];
-
+    
     var textToSend = msg.message.user.name + " used " + atk + " on " + target + "! ";
 
     var hash = textToSend.split("").reduce(_effectivenessReduce,0); ;
