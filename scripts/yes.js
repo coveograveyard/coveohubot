@@ -11,6 +11,6 @@
 
 module.exports = function(robot){
   robot.hear(/^!yes/i,function(msg){
-    msg.send('Good point,' + msg.message.user.name)
+    msg.send('Good point, ' + msg.message.user.name +'!');
   });
 }
