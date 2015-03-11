@@ -23,7 +23,6 @@ module.exports = function(robot){
 
     var ikillyou = splitted.slice(1,-1).join(" ");
     var atk = splitted[0];
-    msg.send("this is what i receive"+msg.message.text+JSON.stringify([atk,ikillyou]) )
     var textToSend = msg.message.user.name + " used " + atk + " on " + ikillyou + "! ";
 
     var hash = textToSend.split("").reduce(_effectivenessReduce,0); ;
@@ -34,6 +33,7 @@ module.exports = function(robot){
     }else{
       textToSend += "\nIt's not very effective... :zzz:";
     }
+//    msg.send("this is what i receive"+msg.message.text+JSON.stringify([atk,ikillyou]) )
 
     msg.send(textToSend);
   });
