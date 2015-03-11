@@ -21,10 +21,10 @@ module.exports = function(robot){
       return;
     }
 
-    var target = splitted.slice(1,-1).join(" ");
+    var ikillyou = splitted.slice(1,-1).join(" ");
     var atk = splitted[0];
-    msg.send("this is what i receive"+msg.message.text)
-    var textToSend = msg.message.user.name + " used " + atk + " on " + target + "! ";
+    msg.send("this is what i receive"+msg.message.text+JSON.stringify([atk,ikillyou]) )
+    var textToSend = msg.message.user.name + " used " + atk + " on " + ikillyou + "! ";
 
     var hash = textToSend.split("").reduce(_effectivenessReduce,0); ;
     var super_effective = (hash % 7 === 0); // Use 3 so super effective is less frequent than not very effective
