@@ -23,7 +23,7 @@ module.exports = function(robot){
 
     var target = splitted.slice(1,-1).join(" ");
     var atk = splitted[0];
-    
+    msg.send("this is what i receive"+msg.message.text)
     var textToSend = msg.message.user.name + " used " + atk + " on " + target + "! ";
 
     var hash = textToSend.split("").reduce(_effectivenessReduce,0); ;
