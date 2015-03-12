@@ -17,16 +17,16 @@ has, etc!
 
 Mandatory:
 
-- HUBOT_SLACK_TOKEN
-- HUBOT_HEROKU_KEEPALIVE_URL found using `heroku apps:info`
-- REDIS_URL (optionnal if using redistogo on heroku)
+- `HUBOT_SLACK_TOKEN`
+- `HUBOT_HEROKU_KEEPALIVE_URL found using `heroku apps:info`
+- `REDIS_URL` (optionnal if using redistogo on heroku)
 
 Optionnal:
 
-- HUBOT_HEROKU_KEEPALIVE_INTERVAL
-- HUBOT_GOOGLE_API_KEY
-- HUBOT_GIPHY_API_KEY=dc6zaTOxFJmzC _(this is the public one from giphy)_
-- HUBOT_POSTMARK_API_KEY
+- `HUBOT_HEROKU_KEEPALIVE_INTERVAL`
+- `HUBOT_GOOGLE_API_KEY`
+- `HUBOT_GIPHY_API_KEY`=dc6zaTOxFJmzC _(this is the public one from giphy)_
+- `HUBOT_POSTMARK_API_KEY`
 
 ### Running hubot Locally
 
