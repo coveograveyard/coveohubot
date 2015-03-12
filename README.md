@@ -15,13 +15,18 @@ has, etc!
 
 ## Environment variable to set
 
-HUBOT_HEROKU_KEEPALIVE_URL found using `heroku apps:info`
-HUBOT_HEROKU_KEEPALIVE_INTERVAL
-HUBOT_SLACK_TOKEN
-HUBOT_GOOGLE_API_KEY
-REDIS_URL
-HUBOT_GIPHY_API_KEY=dc6zaTOxFJmzC
-HUBOT_POSTMARK_API_KEY=df610bcb-ca74-40da-99c7-3eaf66fa55c2
+Mandatory:
+
+- HUBOT_SLACK_TOKEN
+- HUBOT_HEROKU_KEEPALIVE_URL found using `heroku apps:info`
+- REDIS_URL (optionnal if using redistogo on heroku)
+
+Optionnal:
+
+- HUBOT_HEROKU_KEEPALIVE_INTERVAL
+- HUBOT_GOOGLE_API_KEY
+- HUBOT_GIPHY_API_KEY=dc6zaTOxFJmzC _(this is the public one from giphy)_
+- HUBOT_POSTMARK_API_KEY
 
 ### Running hubot Locally
 
