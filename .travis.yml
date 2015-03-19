@@ -4,7 +4,7 @@ node_js:
 deploy:
   provider: heroku
   api_key:
-    secure: kUW7w3szbhxeN0BTsxf3Q3IANPM9hYAMq9SP//T2JsL8C6dXUPFMqpOOxyDmu9D6rVYCgv+MksAQV/ZougoNkD/YpVA4I5w0tjGmtoGC1kbUrs6GMOvymQvy30C5b1s5yYBVjihHNclSHBannnbMwj+kgGRJ7ELN5SjvDS/Dz80=
+    secure: Onfodsgwg05fHtFfaPH0qaYrkrKw8F1sQQtb7ZKUEaJPDa0k94HjYu1Ymdl+X/e9l2MzH/wJzySI4iUMtnvFUOiwNFRIpQiRm5nAtg7BsDagJJDetBhG7XXessv7ClvOCFr4qnJQr6TBfjdYnpQakkNNjrOjwFHuAEPIvwC5Yvg=
   app: coveohubot
   on:
-    repo: pastjean/coveohubot
+    repo: Coveo/coveohubot
