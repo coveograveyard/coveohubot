@@ -9,10 +9,9 @@
   "dice.coffee",
   "do-it-live.coffee",
   "grumpycat.coffee",
-  "likeaboss.coffee",
   "wat.coffee",
   "yoda-pictures.coffee",
   "yoda-quotes.coffee",
-  "whatis",
-  "xkcd"
+  "xkcd",
+  "remember.coffee"
 ]
