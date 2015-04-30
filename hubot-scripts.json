@@ -13,5 +13,7 @@
   "yoda-pictures.coffee",
   "yoda-quotes.coffee",
   "xkcd",
-  "remember.coffee"
+  "remember.coffee",
+  "giphy.coffee",
+  "replygif.coffee"
 ]
