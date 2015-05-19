@@ -8,6 +8,7 @@
 //   pastjean
 //   marcantoineveilleux
 //   guisim
+//   carlbolduc
 var postmark = require('postmark');
 var HUBOT_POSTMARK_API_KEY = process.env.HUBOT_POSTMARK_API_KEY;
 
@@ -26,16 +27,15 @@ module.exports = function(robot){
 		client.sendEmail({
 			"From" : "cloudops@coveo.com",
 			"To" : "cloudops@coveo.com",
-			"Subject" : "[CoveoHubot] Request from " + msg.message.user.name,
-			"TextBody" : "From: " +  msg.message.user.name + "@coveo.com \n" + msg
+			"Subject" : "Fw: [CoveoSlackBot] Request from " + msg.message.user.name,
+			"TextBody" : "From: " +  msg.message.user.name + "@coveo.com \n" + msg.match[1]
 		}, function (error, success) {
 
 			if(error){
 				msg.send("Failed to send email to cloudops@coveo.com. Cause: " + error.message);
-				return;
+				return
 			}
 			msg.send("Successfully sent email to cloudops@coveo.com.");
-
 		});
 
 	});
