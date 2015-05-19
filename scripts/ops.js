@@ -26,8 +26,8 @@ module.exports = function(robot){
 		client.sendEmail({
 			"From" : "cloudops@coveo.com",
 			"To" : "cloudops@coveo.com",
-			"Subject" : "[CoveoSlackBot] Request from " + msg.message.user.name,
-			"TextBody" : msg
+			"Subject" : "[CoveoHubot] Request from " + msg.message.user.name,
+			"TextBody" : "From: " +  msg.message.user.name + "@coveo.com \n" + msg
 		}, function (error, success) {
 
 			if(error){
