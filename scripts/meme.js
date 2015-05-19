@@ -2,9 +2,9 @@
 //   hubot does memes
 //
 // Commands:
-//   !meme <text> : search on developpers.coveo.com
 //   !meme <meme>|<text0>|<text1>
 //   !meme <memesearch>
+//   !meme list
 //
 // Author:
 //   apare
@@ -62,7 +62,8 @@ module.exports = function(robot){
        });
      } else {
        // Here we want a list
-       memeList(q[0],function(err,memes){
+       var search = q[0] === "list" ? "" : q[0]
+       memeList(search,function(err,memes){
          msg.reply(memes.map(function(meme){
            return meme.name
          }).join('\n'));
