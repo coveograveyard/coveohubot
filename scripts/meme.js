@@ -56,7 +56,7 @@ module.exports = function(robot){
            if(result.success == true) {
              msg.reply(result.data.url);
            } else {
-             msg.reply('Error with the meme provider.');
+             msg.send('Error with the meme provider.');
            }
          }).form(formParams);
        });
@@ -64,7 +64,7 @@ module.exports = function(robot){
        // Here we want a list
        var search = q[0] === "list" ? "" : q[0]
        memeList(search,function(err,memes){
-         msg.reply(memes.map(function(meme){
+         msg.send(memes.map(function(meme){
            return meme.name
          }).join('\n'));
        });
