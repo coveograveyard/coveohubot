@@ -5,6 +5,7 @@
   "author": "Coveo <coveo@coveo.com>",
   "description": "I'm here to bring order and troubles",
   "dependencies": {
+    "feed": "^0.2.6",
     "hubot": "^2.11.2",
     "hubot-calculator": "^0.4.0",
     "hubot-diagnostics": "0.0.1",
