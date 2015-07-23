@@ -11,7 +11,7 @@
 var Feed = require('feed');
 
 module.exports = function(robot){
-	robot.router.get('/rss', function(req, res){
+	robot.router.get('/feed', function(req, res){
 		var queryString = [];
 		for(var key in req.query){
 			queryString.push(encodeURIComponent(key)+'='+encodeURIComponent(req.query[key]));
