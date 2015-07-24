@@ -22,7 +22,7 @@ module.exports = function(robot){
 					return res.status(res2.statusCode).send(body)
 				}
 				var feed = new Feed({
-				    title:          'Coveo Results',
+				    title:          'Coveo Results' + (req.query.q != null ? ' - '+ req.query.q : ''),
 				    description:    'Coveo results feed',
 				    link:           'http://coveo.com',
 				    image:          'https://pbs.twimg.com/profile_images/482171470064275456/PFk2GlAV_400x400.png',
