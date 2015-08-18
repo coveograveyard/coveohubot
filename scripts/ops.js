@@ -28,7 +28,7 @@ module.exports = function(robot){
 			"From" : "cloudops@coveo.com",
 			"To" : "cloudops@coveo.com",
 			"Subject" : "Fw: [CoveoSlackBot] Request from " + msg.message.user.name,
-			"TextBody" : "From: " +  msg.message.user.name + "@coveo.com \n" + msg.match[1]
+			"TextBody" : "From: " +  msg.message.user.name + "@coveo.com \n" + msg.slice(5)
 		}, function (error, success) {
 
 			if(error){
