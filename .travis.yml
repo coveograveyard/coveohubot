@@ -8,5 +8,4 @@ services:
 before_install:
 - docker build -t coveo/coveohubot .
 - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-- docker push coveo/coveohubot
-
+- docker push coveo/coveohubot:latest
