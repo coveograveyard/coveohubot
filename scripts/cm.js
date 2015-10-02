@@ -32,7 +32,7 @@ module.exports = function(robot){
             subject += "..."
         }
 		client.sendEmail({
-			"From" : "cmrequest@coveo.com",
+			"From" : "cloudops@coveo.com",
 			"To" : "cmrequest@coveo.com",
 			"Subject" : subject,
 			"TextBody" : "From: " +  msg.message.user.name + "@coveo.com \n" + msg.message.text.slice(4)
